@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700;900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+} 
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-image:linear-gradient(to bottom right, rgba(15,128,199,1) 0%, rgba(20,235,126,1) 100%);
+	background-size: 100% 200%;
+	animation: float 10s linear infinite alternate;
+}
+
+@keyframes float{
+	from{
+		background-position:30% 30%;
+	}
+	to{
+		background-position:100% 100% ;
+	}
+}
+section{
+	padding: 45px;
+	background-color: #FFf;
+	width: 500px;
+	gap: 20px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	box-shadow: 2 px 15 px 20 px rgba(61,61,61,.4);
+}
+header img{
+
+	width: 135px;
+}
+header h3{
+
+	font-size: 1.35rem;
+}
+main{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 25px;
+}
+main a{
+	background: linear-gradient(to bottom right, rgba(15,128,199,1) 0%, rgba(20,235,126,1) 100%);
+	padding: 10px 0;
+	text-decoration: none;
+	color: #000;
+	border-radius: 8px;
+	box-shadow:3.5px 3.5px #757575;
+	transition: all .5s ease-in-out;
+}
+main a:hover{
+	opacity: .75;
+}
+@media(max-width: 500px){
+	section{
+		width: 90%;
+		padding: 40px;
+	}
+	header img
+	{
+		width: 100px;
+	}
+	header h3
+	{
+		font-size: 1.3rem;
+	}
+	main
+	{
+		gap: 15px;
+	}
+	main a
+	{
+		gap: 15px;
+		padding: 10px 0;
+		box-shadow: 1px 1px #757575;
+	}
+}
