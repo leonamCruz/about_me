@@ -1,87 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700;900&display=swap');
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-} 
-body{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	background-image:linear-gradient(to bottom right, rgba(0,0,0,1) 0%, rgba(0,57,50,1) 100%);
-	background-size: 100% 200%;
-	animation: float 6s linear infinite alternate;
 }
 
-@keyframes float{
-	from{
-		background-position:30% 30%;
-	}
-	to{
-		background-position:100% 100% ;
-	}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 1) 0%, rgba(0, 57, 50, 1) 100%);
+    background-size: 100% 200%;
+    animation: float 6s linear infinite alternate;
 }
-section{
-	padding: 45px;
-	background-color: #FFf;
-	width: 500px;
-	gap: 20px;
-	border-radius: 8px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	text-align: center;
-	box-shadow: 2 px 15 px 20 px rgba(61,61,61,.4);
-}
-header img{
 
-	width: 135px;
+@keyframes float {
+    from {
+        background-position: 30% 30%;
+    }
+    to {
+        background-position: 100% 100%;
+    }
 }
-header h3{
 
-	font-size: 1.35rem;
+section {
+    padding: 45px;
+    background-color: #FFF;
+    width: 500px;
+    gap: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 2px 15px 20px rgba(61, 61, 61, .4);
 }
-main{
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	gap: 25px;
+
+section::before, section::after {
+    content: '';
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    z-index: -1;
+    width: 515px;
+    height: 535px;
+    border-radius: 8px;
+    background: linear-gradient(#ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000);
+    animation: animarBorda 75ms linear alternate infinite;
 }
-main a{
-	background: linear-gradient(to bottom right, rgba(0,0,0,1) 0%, rgba(0,57,50,1) 100%);
-	padding: 10px 0;
-	text-decoration: none;
-	color: #fff;
-	border-radius: 8px;
-	transition: all .5s ease-in-out;
+
+section::after {
+    filter: blur(100px);
 }
-main a:hover{
-	opacity: .75;
+
+@keyframes animarBorda {
+    0% {
+        background-size: 50%;
+        opacity: 100%;
+    }
+    100% {
+        background-size: 300%;
+        opacity: 75%;
+    }
 }
-@media(max-width: 500px){
-	section{
-		width: 90%;
-		padding: 40px;
+
+header img {
+
+    width: 135px;
+}
+
+header h3 {
+
+    font-size: 1.35rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+}
+
+main a {
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 1) 0%, rgba(0, 57, 50, 1) 100%);
+    padding: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    transition: all .5s ease-in-out;
+}
+
+main a:hover {
+    opacity: .75;
+}
+
+@media (max-width: 500px) {
+    section {
+        width: 90%;
+        padding: 40px;
+    }
+	section::before, section::after{
+		width:95%;
+		height: 65%;
 	}
-	header img
-	{
-		width: 100px;
-	}
-	header h3
-	{
-		font-size: 1.3rem;
-	}
-	main
-	{
-		gap: 15px;
-	}
-	main a
-	{
-		gap: 15px;
-		padding: 10px 0;
-		box-shadow: 1px 1px #757575;
-	}
+
+    header img {
+        width: 100px;
+    }
+
+    header h3 {
+        font-size: 1.3rem;
+    }
+
+    main {
+        gap: 15px;
+    }
+
+    main a {
+        gap: 15px;
+        padding: 10px 0;
+        box-shadow: 1px 1px #757575;
+    }
 }
