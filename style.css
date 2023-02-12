@@ -10,9 +10,9 @@ body{
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-	background-image:linear-gradient(to bottom right, rgba(15,128,199,1) 0%, rgba(20,235,126,1) 100%);
+	background-image:linear-gradient(to bottom right, rgba(0,0,0,1) 0%, rgba(0,57,50,1) 100%);
 	background-size: 100% 200%;
-	animation: float 10s linear infinite alternate;
+	animation: float 6s linear infinite alternate;
 }
 
 @keyframes float{
@@ -51,12 +51,11 @@ main{
 	gap: 25px;
 }
 main a{
-	background: linear-gradient(to bottom right, rgba(15,128,199,1) 0%, rgba(20,235,126,1) 100%);
+	background: linear-gradient(to bottom right, rgba(0,0,0,1) 0%, rgba(0,57,50,1) 100%);
 	padding: 10px 0;
 	text-decoration: none;
-	color: #000;
+	color: #fff;
 	border-radius: 8px;
-	box-shadow:3.5px 3.5px #757575;
 	transition: all .5s ease-in-out;
 }
 main a:hover{
