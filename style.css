@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 1) 0%, rgba(0, 57, 50, 1) 100%);
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0) 0%, rgb(12, 12, 12) 100%);
     background-size: 100% 200%;
     animation: float 6s linear infinite alternate;
 }
@@ -37,7 +37,6 @@ section {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    box-shadow: 2px 15px 20px rgba(61, 61, 61, .4);
 }
 
 section::before, section::after {
@@ -52,7 +51,8 @@ section::before, section::after {
     width: 515px;
     height: 535px;
     border-radius: 8px;
-    background: linear-gradient(#ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000);
+    background-size: 100% 200%;
+    background: linear-gradient(#d5ac0a, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000);
     animation: animarBorda 75ms linear alternate infinite;
 }
 
@@ -62,12 +62,12 @@ section::after {
 
 @keyframes animarBorda {
     0% {
-        background-size: 50%;
-        opacity: 100%;
+        background-size: 50% 50%;
+        filter: blur(50px);
     }
     100% {
-        background-size: 300%;
-        opacity: 75%;
+        background-size: 300% 300%;
+        filter: blur(100px);
     }
 }
 
