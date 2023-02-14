@@ -44,7 +44,6 @@ section::before, section::after {
     justify-content: center;
     flex-direction: column;
     display: flex;
-    gap: 20px;
     position: absolute;
     z-index: -1;
     width: 515px;
@@ -71,12 +70,10 @@ section::after {
 }
 
 header img {
-
     width: 135px;
 }
 
 header h3 {
-
     font-size: 1.35rem;
 }
 
@@ -108,11 +105,25 @@ main a:hover {
     transition: 50ms;
 }
 
-@media (max-width: 720px) {
-    section {
-        width: calc(75 / 100 * 500px);
-    }
+@media (max-width: 800px) {
 
+    section {
+        padding: 50px;
+        background-color: #FFF;
+        width: 80%;
+        gap: 20px;
+        border-radius: 8px;
+    }
+    section::before, section::after {
+         position: absolute;
+         z-index: -1;
+         width: 50%;
+         height: 70%;
+         border-radius: 8px;
+         background-size: 100% 200%;
+         background: linear-gradient(#d5ac0a, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000);
+         animation: animarBorda 75ms linear alternate infinite;
+     }
     main a {
         font-size: 14px;
     }
