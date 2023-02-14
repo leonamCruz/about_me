@@ -12,24 +12,15 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: linear-gradient(to bottom right, rgb(0, 0, 0) 0%, rgb(12, 12, 12) 100%);
-    background-size: 100% 200%;
-    animation: float 6s linear infinite alternate;
+    background: #000000;
+    flex-direction: column;
 }
 
-@keyframes float {
-    from {
-        background-position: 30% 30%;
-    }
-    to {
-        background-position: 100% 100%;
-    }
-}
 
 section {
     padding: 45px;
     background-color: #FFF;
-    width: 500px;
+    width: 450px;
     gap: 20px;
     border-radius: 8px;
     display: flex;
@@ -37,6 +28,14 @@ section {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+}
+
+.desenvolvido {
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
 }
 
 section::before, section::after {
@@ -84,7 +83,7 @@ header h3 {
 main {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 87%;
     gap: 25px;
 }
 
@@ -94,38 +93,27 @@ main a {
     text-decoration: none;
     color: #fff;
     border-radius: 8px;
-    transition: all .5s ease-in-out;
+    transition: all .6s ease-in-out;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
 }
 
 main a:hover {
     opacity: .75;
+    transform: scale(115%);
+    animation: cubic-bezier(.85, .09, .42, .8);
+    transition: 50ms;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 720px) {
     section {
-        width: 90%;
-        padding: 40px;
-    }
-	section::before, section::after{
-		width:95%;
-		height: 65%;
-	}
-
-    header img {
-        width: 100px;
-    }
-
-    header h3 {
-        font-size: 1.3rem;
-    }
-
-    main {
-        gap: 15px;
+        width: calc(75 / 100 * 500px);
     }
 
     main a {
-        gap: 15px;
-        padding: 10px 0;
-        box-shadow: 1px 1px #757575;
+        font-size: 14px;
     }
 }
