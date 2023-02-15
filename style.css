@@ -107,10 +107,10 @@ main a:hover {
 @media (max-width: 500px) {
 
     section {
-        padding: 20px;
+        padding: 10px;
         background-color: #FFF;
         width: 65%;
-        gap: 20px;
+        gap: 15px;
         border-radius: 8px;
     }
     section::before, section::after {
@@ -124,6 +124,6 @@ main a:hover {
          animation: animarBorda 75ms linear alternate infinite;
      }
     main a {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
