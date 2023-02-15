@@ -34,9 +34,7 @@ section {
 .desenvolvido{
     color: white;
     text-align: center;
-    position: absolute;
     bottom: 0;
-    height: 50px;
 }
 
 section::before, section::after {
