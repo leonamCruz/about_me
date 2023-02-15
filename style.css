@@ -14,23 +14,24 @@ body {
     height: 100vh;
     background: #000000;
     flex-direction: column;
+
 }
-
-
 section {
+    align-self: center;
+    background: white;
+    border-radius: 8px;
     padding: 45px;
-    background-color: #FFF;
     width: 450px;
     gap: 20px;
-    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-}
+    background-size: 1000px;
 
-.desenvolvido {
+}
+.desenvolvido{
     color: white;
     text-align: center;
     position: absolute;
@@ -68,8 +69,8 @@ section::after {
         filter: blur(100px);
     }
 }
-
-header img {
+header img{
+    background-position: center;
     width: 135px;
 }
 
