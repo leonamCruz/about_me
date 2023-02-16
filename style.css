@@ -21,7 +21,7 @@ section {
     background: white;
     border-radius: 8px;
     padding: 45px;
-    width: 450px;
+    width: 400px;
     gap: 20px;
     display: flex;
     align-items: center;
@@ -107,11 +107,15 @@ main a:hover {
 @media (max-width: 500px) {
 
     section {
+        height: 85%;
         padding: 10px;
         background-color: #FFF;
-        width: 65%;
+        width: 80%;
         gap: 15px;
         border-radius: 8px;
+    }
+    .desenvolvido{
+        margin-top: 20px;
     }
     section::before, section::after {
          position: absolute;
@@ -124,6 +128,6 @@ main a:hover {
          animation: animarBorda 75ms linear alternate infinite;
      }
     main a {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
