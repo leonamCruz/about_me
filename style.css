@@ -107,7 +107,7 @@ main a:hover {
 @media (max-width: 500px) {
 
     section {
-        height: 85%;
+        height: 70%;
         padding: 10px;
         background-color: #FFF;
         width: 80%;
